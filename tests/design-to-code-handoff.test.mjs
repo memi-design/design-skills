@@ -25,7 +25,17 @@ test("design-to-code handoff is a discoverable, attributed workflow", async () =
   assert.ok(provenance.sources["design-skills-first-party"].skills.includes(entry.name));
 });
 
-test("paid source text stays excluded from the public skill", async () => {
+test("public workflow does not embed paid installer URLs", async () => {
   const skill = await read("skills/design-to-code-handoff/SKILL.md");
   assert.doesNotMatch(skill, /aiforui\.dev\/|interfacecraft\.dev\/api\/install-skills/);
+});
+
+test("first-party provenance points to the current organization", async () => {
+  const provenance = JSON.parse(await read("provenance.json"));
+  const catalog = JSON.parse(await read("catalog.json"));
+  const repository = "https://github.com/memi-design/design-skills";
+  assert.equal(provenance.sources["design-skills-first-party"].repository, repository);
+  for (const skill of catalog.skills.filter(({ origin }) => origin === "design-skills-first-party")) {
+    assert.equal(skill.source, repository, `${skill.name} has stale generated provenance`);
+  }
 });
