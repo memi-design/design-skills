@@ -148,6 +148,8 @@ Adapted material records its author, source repository, exact commit, license, a
 - Emil Kowalski's MIT-licensed design-engineering skills
 - Josh Puckett's MIT-licensed DialKit repository
 
+For inherited skills revised in this repository, the generated catalog's `source` and `sourceRevision` retain the immutable original snapshot. `sourceUrls` also links to this maintained repository; the historical commit is not a claim that it contains today's workflow text. A portable skill with no required Memi command has an empty `engines` field.
+
 Seven Figma integration entries are original link-only routers because the official MCP guide points to Figma Developer Terms without a standalone redistribution license. This repository does not include the upstream workflow prose, reference bundle, or scripts. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 Interface Craft is a paid Josh Puckett product without a public redistribution license. This repository does not copy its member curriculum.

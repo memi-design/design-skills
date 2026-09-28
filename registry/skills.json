@@ -1245,13 +1245,12 @@
         "design-system"
       ],
       "sourceUrls": [
+        "https://github.com/memi-design/design-skills",
         "https://github.com/sarveshsea/memi"
       ],
       "lastResearchedAt": "2026-07-15T00:00:00.000Z",
       "freshnessDays": 90,
-      "engines": {
-        "memoire": ">=2.0.0"
-      },
+      "engines": {},
       "createdAt": "2026-07-15T00:00:00.000Z",
       "updatedAt": "2026-09-28T00:00:00.000Z",
       "freedomLevel": "high"
@@ -1807,13 +1806,12 @@
         "versioning"
       ],
       "sourceUrls": [
+        "https://github.com/memi-design/design-skills",
         "https://github.com/sarveshsea/memi"
       ],
       "lastResearchedAt": "2026-07-15T00:00:00.000Z",
       "freshnessDays": 90,
-      "engines": {
-        "memoire": ">=2.0.0"
-      },
+      "engines": {},
       "createdAt": "2026-03-26T00:00:00.000Z",
       "updatedAt": "2026-09-28T00:00:00.000Z",
       "freedomLevel": "medium"
@@ -5124,13 +5122,12 @@
         "semantic-tokens"
       ],
       "sourceUrls": [
+        "https://github.com/memi-design/design-skills",
         "https://github.com/sarveshsea/memi"
       ],
       "lastResearchedAt": "2026-07-15T00:00:00.000Z",
       "freshnessDays": 90,
-      "engines": {
-        "memoire": ">=2.0.0"
-      },
+      "engines": {},
       "createdAt": "2026-03-28T00:00:00.000Z",
       "updatedAt": "2026-09-28T00:00:00.000Z",
       "freedomLevel": "medium"

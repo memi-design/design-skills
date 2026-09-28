@@ -64,3 +64,24 @@ test("implementation skills carry evidence through reuse and verification withou
   assert.match(systems, /owner|ownership/i);
   assert.match(systems, /adoption/i);
 });
+
+test("rewritten inherited workflows keep immutable origin but advertise current portable source", async () => {
+  const registry = JSON.parse(await read("registry/skills.json"));
+  const catalog = JSON.parse(await read("catalog.json"));
+  const provenance = JSON.parse(await read("provenance.json"));
+  const original = provenance.sources.memoire;
+  const current = provenance.sources["design-skills-first-party"];
+  assert.match(original.commit, /^[a-f0-9]{40}$/);
+  assert.equal(current.revision, "repository-local");
+
+  for (const name of ["component-catalog", "design-systems", "token-architecture"]) {
+    const entry = registry.skills.find((skill) => skill.name === name);
+    const generated = catalog.skills.find((skill) => skill.name === name);
+    assert.ok(original.skills.includes(name), `${name} preserves inherited attribution`);
+    assert.equal(generated.source, original.repository);
+    assert.equal(generated.sourceRevision, original.commit);
+    assert.ok(entry.sourceUrls.includes(current.repository), `${name} links to the maintained workflow`);
+    assert.deepEqual(entry.engines, {}, `${name} has no Memi runtime requirement`);
+    assert.equal(entry.runtime.portability, "portable");
+  }
+});
