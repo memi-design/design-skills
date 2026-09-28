@@ -1,6 +1,6 @@
 {
   "name": "design-to-code-handoff",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Carry Figma or Paper design evidence into an existing web codebase, design system, Storybook, and browser verification. Use when an agent must implement a supplied design without losing source context or inventing components.",
   "author": "Sarvesh Chidambaram",
   "category": "generate",
@@ -28,5 +28,5 @@
   "dependencies": [],
   "engines": {},
   "createdAt": "2026-09-27T00:00:00.000Z",
-  "updatedAt": "2026-09-27T00:00:00.000Z"
+  "updatedAt": "2026-09-28T00:00:00.000Z"
 }

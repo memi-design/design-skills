@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-27T00:00:00.000Z",
+  "generatedAt": "2026-09-28T00:00:00.000Z",
   "skills": [
     {
       "name": "accessibility-audit",
@@ -1074,7 +1074,7 @@
     {
       "name": "component-catalog",
       "displayName": "Component Catalog",
-      "description": "Select and classify interface components when planning a design system, mapping Figma to code, or checking component-library coverage.",
+      "description": "Decide which interface components to reuse, extend, or add from observed product patterns and the existing codebase. Use for component-library coverage or design-to-code planning.",
       "type": "reference",
       "lifecycle": [
         "design"
@@ -1106,16 +1106,22 @@
         "fallback": "Use user-supplied artifacts and document any unavailable verification."
       },
       "dependencies": [],
-      "related": [],
+      "related": [
+        "design-to-code-handoff",
+        "design-systems"
+      ],
       "collectionIds": [
         "design-systems",
         "product-design"
       ],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "craft",
       "tags": [
-        "craft",
-        "design-skills"
+        "component-api",
+        "component-reuse",
+        "storybook",
+        "accessibility",
+        "design-system"
       ],
       "origin": "memoire",
       "author": "Sarvesh Chidambaram",
@@ -1713,7 +1719,7 @@
     {
       "name": "design-systems",
       "displayName": "Design Systems",
-      "description": "Design system architecture and governance — token taxonomy, component APIs, versioning strategy, adoption metrics, multi-brand theming, and cross-platform consistency",
+      "description": "Plan design-system architecture and governance from existing components, tokens, ownership, and product adoption. Use for system-level changes rather than one component implementation.",
       "type": "workflow",
       "lifecycle": [
         "design"
@@ -1751,7 +1757,7 @@
         "design-systems",
         "product-design"
       ],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "craft",
       "tags": [
         "design-system",
@@ -1817,7 +1823,7 @@
         "implementation",
         "design-systems"
       ],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "generate",
       "tags": [
         "design-to-code",
@@ -5619,7 +5625,7 @@
     {
       "name": "token-architecture",
       "displayName": "Token Architecture",
-      "description": "Design token architecture — multi-tier token systems, semantic naming, theme switching, CSS custom properties, Tailwind mapping, and Figma variable sync",
+      "description": "Map design values to an existing token system and plan safe token changes across themes and consumers. Use for token drift, Figma variable alignment, or cross-surface theming.",
       "type": "workflow",
       "lifecycle": [
         "design"
@@ -5651,12 +5657,15 @@
         "fallback": "Use user-supplied artifacts and document any unavailable verification."
       },
       "dependencies": [],
-      "related": [],
+      "related": [
+        "design-to-code-handoff",
+        "design-systems"
+      ],
       "collectionIds": [
         "design-systems",
         "product-design"
       ],
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "craft",
       "tags": [
         "design-tokens",

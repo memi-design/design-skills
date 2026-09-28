@@ -39,3 +39,49 @@ test("first-party provenance points to the current organization", async () => {
     assert.equal(skill.source, repository, `${skill.name} has stale generated provenance`);
   }
 });
+
+test("implementation skills carry evidence through reuse and verification without assuming a stack", async () => {
+  const [handoff, components, tokens, systems] = await Promise.all([
+    read("skills/design-to-code-handoff/SKILL.md"),
+    read("skills/component-catalog/SKILL.md"),
+    read("skills/token-architecture/SKILL.md"),
+    read("skills/design-systems/SKILL.md"),
+  ]);
+
+  for (const skill of [handoff, components, tokens, systems]) {
+    assert.match(skill, /when to use/i);
+    assert.match(skill, /verification|verify/i);
+    assert.match(skill, /unresolved|unknown|unavailable/i);
+  }
+  assert.match(handoff, /source revision|source timestamp/i);
+  assert.match(handoff, /acceptance criteria/i);
+  assert.match(components, /reuse|extend|new/i);
+  assert.match(components, /Storybook|component preview/i);
+  assert.match(tokens, /source of truth/i);
+  assert.match(tokens, /breaking change|migration/i);
+  assert.doesNotMatch(tokens, /memi tokens (pull|push|diff)/);
+  assert.doesNotMatch(tokens, /Figma wins for visual design decisions/);
+  assert.match(systems, /owner|ownership/i);
+  assert.match(systems, /adoption/i);
+});
+
+test("rewritten inherited workflows keep immutable origin but advertise current portable source", async () => {
+  const registry = JSON.parse(await read("registry/skills.json"));
+  const catalog = JSON.parse(await read("catalog.json"));
+  const provenance = JSON.parse(await read("provenance.json"));
+  const original = provenance.sources.memoire;
+  const current = provenance.sources["design-skills-first-party"];
+  assert.match(original.commit, /^[a-f0-9]{40}$/);
+  assert.equal(current.revision, "repository-local");
+
+  for (const name of ["component-catalog", "design-systems", "token-architecture"]) {
+    const entry = registry.skills.find((skill) => skill.name === name);
+    const generated = catalog.skills.find((skill) => skill.name === name);
+    assert.ok(original.skills.includes(name), `${name} preserves inherited attribution`);
+    assert.equal(generated.source, original.repository);
+    assert.equal(generated.sourceRevision, original.commit);
+    assert.ok(entry.sourceUrls.includes(current.repository), `${name} links to the maintained workflow`);
+    assert.deepEqual(entry.engines, {}, `${name} has no Memi runtime requirement`);
+    assert.equal(entry.runtime.portability, "portable");
+  }
+});

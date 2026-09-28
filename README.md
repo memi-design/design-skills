@@ -108,6 +108,9 @@ Explicit installation of a historical slug continues to work during the compatib
 | Fix color or contrast | [`better-colors`](skills/better-colors/SKILL.md) |
 | Improve typography | [`better-typography`](skills/better-typography/SKILL.md) |
 | Carry a Figma or Paper design into components, Storybook, and code | [`design-to-code-handoff`](skills/design-to-code-handoff/SKILL.md) |
+| Decide whether to reuse, extend, or add a component | [`component-catalog`](skills/component-catalog/SKILL.md) |
+| Reconcile design values with existing tokens and themes | [`token-architecture`](skills/token-architecture/SKILL.md) |
+| Govern shared components and tokens across products | [`design-systems`](skills/design-systems/SKILL.md) |
 | Audit accessibility | [`accessibility-audit`](skills/accessibility-audit/SKILL.md) |
 | Review a bounded animation change | [`review-animations`](skills/review-animations/SKILL.md) |
 | Plan motion improvements | [`improve-animations`](skills/improve-animations/SKILL.md) |
@@ -144,6 +147,8 @@ Adapted material records its author, source repository, exact commit, license, a
 - Jakub Krehel's MIT-licensed design skills
 - Emil Kowalski's MIT-licensed design-engineering skills
 - Josh Puckett's MIT-licensed DialKit repository
+
+For inherited skills revised in this repository, the generated catalog's `source` and `sourceRevision` retain the immutable original snapshot. `sourceUrls` also links to this maintained repository; the historical commit is not a claim that it contains today's workflow text. A portable skill with no required Memi command has an empty `engines` field.
 
 Seven Figma integration entries are original link-only routers because the official MCP guide points to Figma Developer Terms without a standalone redistribution license. This repository does not include the upstream workflow prose, reference bundle, or scripts. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
