@@ -115,7 +115,7 @@
     },
     "design-skills-first-party": {
       "author": "Sarvesh Chidambaram",
-      "repository": "https://github.com/sarveshsea/design-skills",
+      "repository": "https://github.com/memi-design/design-skills",
       "revision": "repository-local",
       "license": "MIT",
       "licenseFile": "LICENSE",
@@ -126,6 +126,7 @@
         "content-design",
         "creative-rendering-audit",
         "design-measurement-and-experimentation",
+        "design-to-code-handoff",
         "figma-code-connect",
         "figma-create-file",
         "figma-design-systems",

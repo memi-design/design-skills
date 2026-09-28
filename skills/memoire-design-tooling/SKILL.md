@@ -29,6 +29,7 @@ memi mcp start --no-figma
 
 1. Read the local instructions first: `AGENTS.md`, README files, `.memoire/`, specs, tokens, and `memoire.agent.yaml`.
 2. Generate a design-agent preflight with `memi agent brief . --intent "<task>" --json`; use it as the local evidence and cost-control contract.
+   For a supplied Figma or Paper design, pair the brief with `design-to-code-handoff` so the source, component/token mapping, Storybook state, browser check, and unresolved differences survive into the implementation receipt.
 3. Collect evidence with `memi diagnose .`, `memi ux audit . --json`, `memi craft audit . --json`, and `memi tokens --from ./src --report` before making broad UI edits.
 4. If a runtime route matters, run `memi diagnose http://localhost:<port>` or `memi design-doc <url> --spec`.
 5. If Figma is connected, use memi/Figma context for token pulls, component inspection, screenshot capture, and sync. Figma is optional; do not block code-first audits on it.

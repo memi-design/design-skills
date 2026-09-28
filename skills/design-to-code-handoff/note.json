@@ -1,0 +1,32 @@
+{
+  "name": "design-to-code-handoff",
+  "version": "1.0.0",
+  "description": "Carry Figma or Paper design evidence into an existing web codebase, design system, Storybook, and browser verification. Use when an agent must implement a supplied design without losing source context or inventing components.",
+  "author": "Sarvesh Chidambaram",
+  "category": "generate",
+  "tags": [
+    "design-to-code",
+    "figma",
+    "paper",
+    "storybook",
+    "design-system",
+    "frontend"
+  ],
+  "sourceUrls": [
+    "https://github.com/memi-design/design-skills"
+  ],
+  "lastResearchedAt": "2026-09-27T00:00:00.000Z",
+  "freshnessDays": 180,
+  "skills": [
+    {
+      "file": "SKILL.md",
+      "name": "Design To Code Handoff",
+      "activateOn": "design-to-code-handoff",
+      "freedomLevel": "medium"
+    }
+  ],
+  "dependencies": [],
+  "engines": {},
+  "createdAt": "2026-09-27T00:00:00.000Z",
+  "updatedAt": "2026-09-27T00:00:00.000Z"
+}

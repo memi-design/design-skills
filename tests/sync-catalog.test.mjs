@@ -35,8 +35,9 @@ test("catalog synchronization can target an isolated workspace", async () => {
   const workspace = await isolatedWorkspace();
   await execFileAsync(process.execPath, ["scripts/sync-catalog.mjs", "--root", workspace], { cwd: root });
   const catalog = JSON.parse(await readFile(path.join(workspace, "catalog.json"), "utf8"));
+  const registry = JSON.parse(await readFile(path.join(workspace, "registry/skills.json"), "utf8"));
   assert.equal(catalog.schemaVersion, 2);
-  assert.equal(catalog.skills.length, 94);
+  assert.equal(catalog.skills.length, registry.skills.length);
 });
 
 test("catalog synchronization is deterministic and idempotent", async () => {

@@ -10,6 +10,7 @@
     "component-catalog",
     "design-system-reference",
     "design-systems",
+    "design-to-code-handoff",
     "token-architecture"
   ],
   "dependencyPolicy": "include-required"
