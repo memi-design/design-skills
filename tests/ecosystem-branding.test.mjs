@@ -73,15 +73,18 @@ test("vendors the exact revision-3 brand contract and rejects Design Skills iden
 });
 
 test("public catalog copy uses the memi organization and preserves the legacy package identifier", async () => {
-  const [readme, packageSource, codeowners] = await Promise.all([
+  const [readme, packageSource, codeowners, registrySource] = await Promise.all([
     read("README.md"),
     read("package.json"),
     read(".github/CODEOWNERS"),
+    read("registry/skills.json"),
   ]);
   const packageMetadata = JSON.parse(packageSource);
+  const skills = JSON.parse(registrySource).skills;
+  const deprecatedCount = skills.filter(({ status }) => status === "deprecated").length;
 
   assert.match(readme, /^# memi Design Skills$/m);
-  assert.match(readme, /94 installable skills: 88 canonical workflows and 6 deprecated compatibility entries/);
+  assert.ok(readme.includes(`${skills.length} installable skills: ${skills.length - deprecatedCount} canonical workflows and ${deprecatedCount} deprecated compatibility entries`));
   assert.match(readme, /portable skills layer for the memi ecosystem/);
   assert.match(readme, /^## Installation$/m);
   assert.match(readme, /npx skills@1\.5\.17 add memi-design\/design-skills --list/);
