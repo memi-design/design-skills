@@ -39,3 +39,28 @@ test("first-party provenance points to the current organization", async () => {
     assert.equal(skill.source, repository, `${skill.name} has stale generated provenance`);
   }
 });
+
+test("implementation skills carry evidence through reuse and verification without assuming a stack", async () => {
+  const [handoff, components, tokens, systems] = await Promise.all([
+    read("skills/design-to-code-handoff/SKILL.md"),
+    read("skills/component-catalog/SKILL.md"),
+    read("skills/token-architecture/SKILL.md"),
+    read("skills/design-systems/SKILL.md"),
+  ]);
+
+  for (const skill of [handoff, components, tokens, systems]) {
+    assert.match(skill, /when to use/i);
+    assert.match(skill, /verification|verify/i);
+    assert.match(skill, /unresolved|unknown|unavailable/i);
+  }
+  assert.match(handoff, /source revision|source timestamp/i);
+  assert.match(handoff, /acceptance criteria/i);
+  assert.match(components, /reuse|extend|new/i);
+  assert.match(components, /Storybook|component preview/i);
+  assert.match(tokens, /source of truth/i);
+  assert.match(tokens, /breaking change|migration/i);
+  assert.doesNotMatch(tokens, /memi tokens (pull|push|diff)/);
+  assert.doesNotMatch(tokens, /Figma wins for visual design decisions/);
+  assert.match(systems, /owner|ownership/i);
+  assert.match(systems, /adoption/i);
+});

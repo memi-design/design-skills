@@ -1,12 +1,15 @@
 {
   "name": "component-catalog",
-  "version": "1.0.0",
-  "description": "Select and classify interface components when planning a design system, mapping Figma to code, or checking component-library coverage.",
+  "version": "1.1.0",
+  "description": "Decide which interface components to reuse, extend, or add from observed product patterns and the existing codebase. Use for component-library coverage or design-to-code planning.",
   "author": "Sarvesh Chidambaram",
   "category": "craft",
   "tags": [
-    "craft",
-    "design-skills"
+    "component-api",
+    "component-reuse",
+    "storybook",
+    "accessibility",
+    "design-system"
   ],
   "sourceUrls": [
     "https://github.com/sarveshsea/memi"
@@ -26,5 +29,5 @@
     "memoire": ">=2.0.0"
   },
   "createdAt": "2026-07-15T00:00:00.000Z",
-  "updatedAt": "2026-07-15T00:00:00.000Z"
+  "updatedAt": "2026-09-28T00:00:00.000Z"
 }

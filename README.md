@@ -108,6 +108,9 @@ Explicit installation of a historical slug continues to work during the compatib
 | Fix color or contrast | [`better-colors`](skills/better-colors/SKILL.md) |
 | Improve typography | [`better-typography`](skills/better-typography/SKILL.md) |
 | Carry a Figma or Paper design into components, Storybook, and code | [`design-to-code-handoff`](skills/design-to-code-handoff/SKILL.md) |
+| Decide whether to reuse, extend, or add a component | [`component-catalog`](skills/component-catalog/SKILL.md) |
+| Reconcile design values with existing tokens and themes | [`token-architecture`](skills/token-architecture/SKILL.md) |
+| Govern shared components and tokens across products | [`design-systems`](skills/design-systems/SKILL.md) |
 | Audit accessibility | [`accessibility-audit`](skills/accessibility-audit/SKILL.md) |
 | Review a bounded animation change | [`review-animations`](skills/review-animations/SKILL.md) |
 | Plan motion improvements | [`improve-animations`](skills/improve-animations/SKILL.md) |

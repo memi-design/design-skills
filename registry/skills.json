@@ -1227,16 +1227,22 @@
         "fallback": "Use user-supplied artifacts and document any unavailable verification."
       },
       "dependencies": [],
-      "related": [],
+      "related": [
+        "design-to-code-handoff",
+        "design-systems"
+      ],
       "collectionIds": [
         "design-systems",
         "product-design"
       ],
       "legacyCategory": "craft",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "tags": [
-        "craft",
-        "design-skills"
+        "component-api",
+        "component-reuse",
+        "storybook",
+        "accessibility",
+        "design-system"
       ],
       "sourceUrls": [
         "https://github.com/sarveshsea/memi"
@@ -1247,7 +1253,7 @@
         "memoire": ">=2.0.0"
       },
       "createdAt": "2026-07-15T00:00:00.000Z",
-      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-09-28T00:00:00.000Z",
       "freedomLevel": "high"
     },
     {
@@ -1791,7 +1797,7 @@
         "product-design"
       ],
       "legacyCategory": "craft",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "tags": [
         "design-system",
         "tokens",
@@ -1809,7 +1815,7 @@
         "memoire": ">=2.0.0"
       },
       "createdAt": "2026-03-26T00:00:00.000Z",
-      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-09-28T00:00:00.000Z",
       "freedomLevel": "medium"
     },
     {
@@ -5099,13 +5105,16 @@
         "fallback": "Use user-supplied artifacts and document any unavailable verification."
       },
       "dependencies": [],
-      "related": [],
+      "related": [
+        "design-to-code-handoff",
+        "design-systems"
+      ],
       "collectionIds": [
         "design-systems",
         "product-design"
       ],
       "legacyCategory": "craft",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "tags": [
         "design-tokens",
         "theming",
@@ -5123,7 +5132,7 @@
         "memoire": ">=2.0.0"
       },
       "createdAt": "2026-03-28T00:00:00.000Z",
-      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-09-28T00:00:00.000Z",
       "freedomLevel": "medium"
     },
     {
@@ -6069,7 +6078,7 @@
         "design-systems"
       ],
       "legacyCategory": "generate",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "tags": [
         "design-to-code",
         "figma",
@@ -6085,7 +6094,7 @@
       "freshnessDays": 180,
       "engines": {},
       "createdAt": "2026-09-27T00:00:00.000Z",
-      "updatedAt": "2026-09-27T00:00:00.000Z",
+      "updatedAt": "2026-09-28T00:00:00.000Z",
       "freedomLevel": "medium"
     }
   ]

@@ -1,19 +1,25 @@
 ---
 name: component-catalog
-description: Select and classify interface components when planning a design system, mapping Figma to code, or checking component-library coverage.
+description: Decide which interface components to reuse, extend, or add from observed product patterns and the existing codebase. Use for component-library coverage or design-to-code planning.
 ---
 
 # Component catalog
 
-Use this skill to decide which components a product needs and how each component maps to Atomic Design and shadcn/ui.
+## When to use
+
+Use for a bounded product surface with repeated patterns, or when a supplied design does not clearly map to existing components. For implementation of one Figma or Paper selection, use `design-to-code-handoff` first. Do not use a universal inventory as a build list.
 
 ## Workflow
 
-1. Inventory the product's workflows, states, and repeated interface patterns.
-2. Read [the universal component catalog](references/catalog.md).
-3. Select only components supported by current product evidence.
-4. Assign each component an Atomic Design level.
-5. Reuse a local or shadcn/ui primitive before proposing a new implementation.
-6. Record required variants, states, accessibility behavior, and composition dependencies.
+1. Inventory actual routes, workflows, states, and repeated patterns. Read local instructions, component APIs, tokens, existing stories or component previews, and consumers. Record where each candidate appears.
+2. Use [the component catalog](references/catalog.md) as a vocabulary check. Identify the smallest semantic component that covers observed behavior. Do not assume Atomic Design or shadcn/ui is installed; use either only when the repository follows it.
+3. For each candidate choose **reuse**, **extend**, or **new**. Reuse when semantics, interaction, accessibility, and states fit. Extend when the API can support a missing state without breaking current callers. Add only when the needed behavior has a distinct contract. Record the alternative considered and why it fails.
+4. Specify the public API, supported variants, states, composition, keyboard behavior, focus management, responsive behavior, and token dependencies. Keep visual variants separate from semantic behavior.
+5. Verify the decision with representative callers and a Storybook story or existing component preview. Test keyboard and touch interaction for controls. Check that the proposed API covers observed states without one-off overrides.
 
-Treat the catalog as a discovery aid, not a requirement to build every listed component.
+## Output
+
+| Pattern and evidence | Existing component | Decision and reason | Required states and contract | Verification | Unresolved |
+| --- | --- | --- | --- | --- | --- |
+
+Name missing source evidence or unavailable previews. A component count is not evidence of coverage; report the observed workflows and states that are covered instead.

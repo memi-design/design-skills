@@ -1,7 +1,7 @@
 {
   "name": "design-systems",
-  "version": "1.0.0",
-  "description": "Design system architecture and governance — token taxonomy, component APIs, versioning strategy, adoption metrics, multi-brand theming, and cross-platform consistency",
+  "version": "1.1.0",
+  "description": "Plan design-system architecture and governance from existing components, tokens, ownership, and product adoption. Use for system-level changes rather than one component implementation.",
   "author": "Sarvesh Chidambaram",
   "category": "craft",
   "tags": [
@@ -30,5 +30,5 @@
     "memoire": ">=2.0.0"
   },
   "createdAt": "2026-03-26T00:00:00.000Z",
-  "updatedAt": "2026-07-15T00:00:00.000Z"
+  "updatedAt": "2026-09-28T00:00:00.000Z"
 }
