@@ -6022,6 +6022,71 @@
       "createdAt": "2026-07-17T00:00:00.000Z",
       "updatedAt": "2026-07-17T00:00:00.000Z",
       "freedomLevel": "low"
+    },
+    {
+      "name": "design-to-code-handoff",
+      "displayName": "Design To Code Handoff",
+      "type": "workflow",
+      "domains": [
+        "implementation",
+        "systems"
+      ],
+      "lifecycle": [
+        "deliver"
+      ],
+      "actions": [
+        "integrate"
+      ],
+      "surfaces": [
+        "code",
+        "web"
+      ],
+      "maturity": "stable",
+      "visibility": "public",
+      "status": "canonical",
+      "routing": {
+        "intents": [
+          "design-to-code-handoff"
+        ],
+        "role": "primary",
+        "excludes": []
+      },
+      "runtime": {
+        "portability": "portable",
+        "requires": [],
+        "optional": [
+          "figma.read"
+        ],
+        "fallback": "Use supplied exports or screenshots and state unavailable verification."
+      },
+      "dependencies": [],
+      "related": [
+        "figma-implement-design",
+        "memoire-design-tooling"
+      ],
+      "collectionIds": [
+        "implementation",
+        "design-systems"
+      ],
+      "legacyCategory": "generate",
+      "version": "1.0.0",
+      "tags": [
+        "design-to-code",
+        "figma",
+        "paper",
+        "storybook",
+        "design-system",
+        "frontend"
+      ],
+      "sourceUrls": [
+        "https://github.com/memi-design/design-skills"
+      ],
+      "lastResearchedAt": "2026-09-27T00:00:00.000Z",
+      "freshnessDays": 180,
+      "engines": {},
+      "createdAt": "2026-09-27T00:00:00.000Z",
+      "updatedAt": "2026-09-27T00:00:00.000Z",
+      "freedomLevel": "medium"
     }
   ]
 }

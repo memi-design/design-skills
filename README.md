@@ -17,7 +17,7 @@ Governed catalog of portable and capability-gated design workflows for coding ag
 **Status:** Available as a source repository catalog.
 
 <!-- GENERATED:CATALOG-SUMMARY:START -->
-The current catalog contains **94 installable skills: 88 canonical workflows and 6 deprecated compatibility entries**.
+The current catalog contains **95 installable skills: 89 canonical workflows and 6 deprecated compatibility entries**.
 <!-- GENERATED:CATALOG-SUMMARY:END -->
 
 The repository keeps three sources of truth:
@@ -71,9 +71,9 @@ Collections are curated navigation and policy manifests under `registry/collecti
 | Collection | Skills | Availability | Purpose |
 | --- | ---: | --- | --- |
 | `core` | 15 | Recommended core | Recommended portable, stable design judgment for most product work. |
-| `design-systems` | 5 | Optional | Tokens, components, governance, and system architecture. |
+| `design-systems` | 6 | Optional | Tokens, components, governance, and system architecture. |
 | `figma` | 15 | Optional | Capability-gated Figma workflows. |
-| `implementation` | 9 | Optional | Framework and design-to-code generation workflows. |
+| `implementation` | 10 | Optional | Framework and design-to-code generation workflows. |
 | `ios-swift` | 10 | Optional | Design, build, test, profile, and ship current SwiftUI applications with agent-verifiable workflows. |
 | `memoire-operations` | 19 | Internal/optional | Mémoire-specific and agent-runtime operations. |
 | `motion-video` | 12 | Optional | Interaction motion, animation review, and product video workflows. |
@@ -107,6 +107,7 @@ Explicit installation of a historical slug continues to work during the compatib
 | Improve an interface broadly | [`better-ui`](skills/better-ui/SKILL.md) |
 | Fix color or contrast | [`better-colors`](skills/better-colors/SKILL.md) |
 | Improve typography | [`better-typography`](skills/better-typography/SKILL.md) |
+| Carry a Figma or Paper design into components, Storybook, and code | [`design-to-code-handoff`](skills/design-to-code-handoff/SKILL.md) |
 | Audit accessibility | [`accessibility-audit`](skills/accessibility-audit/SKILL.md) |
 | Review a bounded animation change | [`review-animations`](skills/review-animations/SKILL.md) |
 | Plan motion improvements | [`improve-animations`](skills/improve-animations/SKILL.md) |

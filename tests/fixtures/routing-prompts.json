@@ -4,6 +4,18 @@
   "minimumAccuracy": 1,
   "cases": [
     {
+      "id": "handoff-figma-storybook",
+      "category": "design-catalog",
+      "prompt": "Take this Figma design into the existing design system and Storybook stories.",
+      "expected": "design-to-code-handoff"
+    },
+    {
+      "id": "handoff-paper-browser",
+      "category": "design-catalog",
+      "prompt": "Implement this Paper design in our React codebase with browser verification.",
+      "expected": "design-to-code-handoff"
+    },
+    {
       "id": "shader-bayer-webgl",
       "category": "shader-dither",
       "prompt": "Add ordered Bayer dithering to this WebGL2 fragment shader.",

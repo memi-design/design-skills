@@ -14,8 +14,8 @@ This repository does not reproduce Figma's implementation skill. Use the officia
 3. Load Figma's current implementation skill from the official MCP guide distribution.
 4. Use the official integration to obtain current design context and assets.
 5. Reuse local components and tokens before creating new ones.
-6. Implement through the repository's normal test and review workflow.
-7. Compare the result against the supplied design at representative states and viewport sizes.
+6. Use `design-to-code-handoff` to map the selection to existing components and tokens, implement through the repository's normal test workflow, and create or update Storybook stories when present.
+7. Compare the result against the supplied design at representative states and viewport sizes, including interaction and accessibility states.
 8. If the official skill is unavailable, request exported context or screenshots and proceed only as an explicitly limited static implementation.
 
 Official source: [Figma MCP Server Guide](https://github.com/figma/mcp-server-guide)

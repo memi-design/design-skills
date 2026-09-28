@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-26T00:00:00.000Z",
+  "generatedAt": "2026-09-27T00:00:00.000Z",
   "skills": [
     {
       "name": "accessibility-audit",
@@ -1769,6 +1769,72 @@
       "upstreamCommit": "0fcc01ceb630e623c1cfe1adae04ddcf0da6a43e",
       "relationship": "first-party",
       "path": "skills/design-systems"
+    },
+    {
+      "name": "design-to-code-handoff",
+      "displayName": "Design To Code Handoff",
+      "description": "Carry Figma or Paper design evidence into an existing web codebase, design system, Storybook, and browser verification. Use when an agent must implement a supplied design without losing source context or inventing components.",
+      "type": "workflow",
+      "lifecycle": [
+        "deliver"
+      ],
+      "domains": [
+        "implementation",
+        "systems"
+      ],
+      "actions": [
+        "integrate"
+      ],
+      "surfaces": [
+        "code",
+        "web"
+      ],
+      "maturity": "stable",
+      "freedomLevel": "medium",
+      "visibility": "public",
+      "status": "canonical",
+      "routing": {
+        "intents": [
+          "design-to-code-handoff"
+        ],
+        "role": "primary",
+        "excludes": []
+      },
+      "runtime": {
+        "portability": "portable",
+        "requires": [],
+        "optional": [
+          "figma.read"
+        ],
+        "fallback": "Use supplied exports or screenshots and state unavailable verification."
+      },
+      "dependencies": [],
+      "related": [
+        "figma-implement-design",
+        "memoire-design-tooling"
+      ],
+      "collectionIds": [
+        "implementation",
+        "design-systems"
+      ],
+      "version": "1.0.0",
+      "category": "generate",
+      "tags": [
+        "design-to-code",
+        "figma",
+        "paper",
+        "storybook",
+        "design-system",
+        "frontend"
+      ],
+      "origin": "design-skills-first-party",
+      "author": "Sarvesh Chidambaram",
+      "license": "MIT",
+      "source": "https://github.com/sarveshsea/design-skills",
+      "sourceRevision": "repository-local",
+      "upstreamCommit": null,
+      "relationship": "first-party-in-repository",
+      "path": "skills/design-to-code-handoff"
     },
     {
       "name": "dialkit",
